@@ -7,6 +7,6 @@ const consultarRemedios = async (req, res) => {
   }catch(err){
     res.status(500).send({error: "Erro inesperado"});
   }
-  }
+}
 
-  exports.consultarRemedios = consultarRemedios;
+exports.consultarRemedios = consultarRemedios;
