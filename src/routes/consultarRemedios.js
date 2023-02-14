@@ -1,6 +1,6 @@
 const {supabase} = require("../services/clientSupabase");
 
-const consultarRemedios = async (req, res) => {
+const consultarRemedios = async (_req, res) => {
   try{
     const getRemedios =  await supabase.from('remedios').select();
     res.status(200).send(getRemedios.data);

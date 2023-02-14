@@ -51,22 +51,9 @@
       }
     },
     "/consultar/dispositivos": {
-      "post": {
+      "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "medicamento": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -93,10 +80,10 @@
                 "dataRemedio": {
                   "example": "any"
                 },
-                "nomeRemedio": {
+                "dispositivoId": {
                   "example": "any"
                 },
-                "dispositivoId": {
+                "nomeRemedio": {
                   "example": "any"
                 }
               }
@@ -127,9 +114,6 @@
               "type": "object",
               "properties": {
                 "dataRemedioConsumido": {
-                  "example": "any"
-                },
-                "nomeRemedio": {
                   "example": "any"
                 },
                 "dispositivoId": {

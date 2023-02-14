@@ -14,7 +14,7 @@ app.get("/", (_req, res) => {
 });
 app.get("/consultar/remedios", consultarRemedios.consultarRemedios);
 app.get("/consultar/medicamentos", consultarMedicamentos.consultarMedicamentos);
-app.post("/consultar/dispositivos", consultarDispositivos.consultarDispositivos);
+app.get("/consultar/dispositivos", consultarDispositivos.consultarDispositivos);
 app.post("/agendar", agendarRemedio.agendarRemedio);
 app.post("/consumir", consumirRemedio.consumirRemedio);
 

@@ -3,8 +3,8 @@ const {supabase} = require("../services/clientSupabase");
 const consumirRemedio = async (req, res) => {
   try{
     const body = req.body;
-    if(!(body.dataRemedioConsumido && body.nomeRemedio && body.dispositivoId)) throw new Error("400");
-    await supabase.from('remedios').update({consumido: body.dataRemedioConsumido}).filter("nome", "like", body.nomeRemedio).eq("dispositivo", body.dispositivoId);
+    if(!(body.dataRemedioConsumido && body.dispositivoId)) throw new Error("400");
+    await supabase.from('remedios').update({consumido: body.dataRemedioConsumido}).eq("dispositivo", body.dispositivoId);
     res.status(200).send({status: "ok"});
   }catch(error){
     if(error.message === "400") {

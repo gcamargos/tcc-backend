@@ -26,13 +26,4 @@ describe("/consultar endpoint", () => {
     expect(response.statusCode).toBe(200);
   });
 
-  it("deve retornar 400 e uma mensagem de erro quando os parâmetros obrigatórios estiverem ausentes", async () => {
-    const response = await request(app)
-    .post("/consultar/dispositivos")
-    .send({
-      "medicamentoAtributoErrado": "Advil"
-    });
-    expect(response.statusCode).toBe(400);
-    expect(response.body.error).toBe("Não foi passado o atributo medicamento");
-  });
 });
