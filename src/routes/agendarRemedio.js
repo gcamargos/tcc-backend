@@ -4,12 +4,12 @@ const { OAuth2 } = google.auth
 require('dotenv').config();
 
 const oAuth2Client = new OAuth2(
-  process.env.KEY_P,
-  process.env.KEY_S
+  "1038278479898-eptffds5t4s4rgoi7vknbindcoce3h18.apps.googleusercontent.com",
+  "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"
 )
 
 oAuth2Client.setCredentials({
-  refresh_token: process.env.KEY_R,
+  refresh_token: "1//040ciEdxu0wgVCgYIARAAGAQSNwF-L9IrsiVqHTHpToJj4VfYWbsFcHGpGpnHf1cIWj8LNf3lgLHKJ7uSk9hzdhEQyx0kuDhmzjU",
 })
 
 
